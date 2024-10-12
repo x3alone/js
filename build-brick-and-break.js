@@ -1,4 +1,4 @@
-function build(n) {
+export function build(n) {
     let bricks = 1;
     const tower = document.getElementById('tower');
 
@@ -17,7 +17,7 @@ function build(n) {
     }, 100);
 }
 
-function repair(...ids) {
+export function repair(...ids) {
     ids.forEach(id => {
         const brick = document.getElementById(id);
         if (brick) {
@@ -30,7 +30,7 @@ function repair(...ids) {
     });
 }
 
-function destroy() {
+export function destroy() {
     const bricks = document.querySelectorAll('div[id^="brick-"]');
     if (bricks.length > 0) {
         const lastBrick = bricks[bricks.length - 1]; 
