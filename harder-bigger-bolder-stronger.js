@@ -1,4 +1,4 @@
-function generateLetters() {
+export function generateLetters() {
     const container = document.getElementById('letter-container'); 
     const totalLetters = 120;
 
@@ -9,7 +9,7 @@ function generateLetters() {
         letterDiv.textContent = letter;
 
         const fontSize = 11 + Math.floor((i / totalLetters) * 119);
-        letterDiv.style.fontSize = `${fontSize}px`;
+        letterDiv.style.fontSize = fontSize + 'px';
 
         if (i < totalLetters / 3) {
             letterDiv.style.fontWeight = '300';
@@ -23,5 +23,4 @@ function generateLetters() {
     }
 }
 
-// Call the function to generate the letters
 generateLetters();
